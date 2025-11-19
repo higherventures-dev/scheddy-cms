@@ -1,28 +1,29 @@
 // config/middlewares.ts
-
 export default [
   'strapi::logger',
   'strapi::errors',
-
-  // You can keep security before CORS
-  'strapi::security',
-
-  // Explicit CORS config
+  {
+    name: 'strapi::security',
+    config: {
+      contentSecurityPolicy: false, // keeps admin from breaking on some hosts
+    },
+  },
   {
     name: 'strapi::cors',
     config: {
       enabled: true,
       origin: [
-        'http://localhost:3000',              // local Next dev
-        'https://scheddy-www.vercel.app',     // your marketing site on Vercel
-        'https://scheddy.us',                 // custom domain (when you wire it up)
+        'https://scheddy-cms.onrender.com',
+        'https://www.scheddy.us',
+        'https://scheddy.us',
+        'http://localhost:1337',
+        'http://localhost:3000',
       ],
-      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-      headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
-      keepHeaderOnError: true,
+      headers: '*',
+      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
+      credentials: true,
     },
   },
-
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
