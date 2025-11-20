@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_sections_logo_marquees",
+  "info": {
+    "displayName": "Logo / Artist Marquee",
+    "icon": "media"
+  },
+  "attributes": {
+    "section_title": {
+      "type": "string",
+      "required": true
+    },
+    "section_subtitle": {
+      "type": "text"
+    },
+    "cta_label": {
+      "type": "string"
+    },
+    "cta_url": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string",
+      "description": "Small line like 'Already trusted by early studios...'"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.artist-card",
+      "min": 1
+    }
+  }
+}

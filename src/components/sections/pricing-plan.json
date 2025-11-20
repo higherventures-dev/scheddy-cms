@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_sections_pricing_plans",
+  "info": {
+    "displayName": "Pricing Plan",
+    "icon": "priceTag"
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "description": "Plan name (e.g. 'Early Access Waitlist')"
+    },
+    "price_label": {
+      "type": "string",
+      "description": "Price text (e.g. 'Free', '$49 / Month')"
+    },
+    "price_subtitle": {
+      "type": "string",
+      "description": "Short descriptor under the price"
+    },
+    "cta_label": {
+      "type": "string"
+    },
+    "cta_url": {
+      "type": "string"
+    },
+    "highlighted": {
+      "type": "boolean",
+      "default": false,
+      "description": "Mark as featured / primary plan"
+    },
+    "includes_label": {
+      "type": "string",
+      "default": "Includes"
+    },
+    "features": {
+      "type": "json",
+      "description": "Array of bullet-point features (strings)"
+    },
+    "details_link_label": {
+      "type": "string",
+      "default": "See details"
+    },
+    "details_link_url": {
+      "type": "string"
+    }
+  }
+}

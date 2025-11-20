@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_sections_testimonial_sections",
+  "info": {
+    "displayName": "Testimonial Section",
+    "icon": "quote"
+  },
+  "attributes": {
+    "section_title": {
+      "type": "string",
+      "description": "Optional heading above testimonials"
+    },
+    "highlight_quote": {
+      "type": "component",
+      "component": "sections.testimonial",
+      "description": "Main testimonial to feature"
+    },
+    "testimonials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.testimonial",
+      "description": "Additional testimonials / avatars"
+    }
+  }
+}

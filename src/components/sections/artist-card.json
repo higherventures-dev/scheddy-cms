@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_sections_artist_cards",
+  "info": {
+    "displayName": "Artist / Studio Card",
+    "icon": "user"
+  },
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "USING SHEDDY",
+      "description": "Small uppercase label at top"
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "description": "Studio or artist name (e.g. 'Midnight Needle')"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "location": {
+      "type": "string",
+      "description": "Optional location or tagline"
+    }
+  }
+}

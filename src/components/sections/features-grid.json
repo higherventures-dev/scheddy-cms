@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_sections_features_grids",
+  "info": {
+    "displayName": "Features Grid",
+    "icon": "grid"
+  },
+  "attributes": {
+    "section_title": {
+      "type": "string",
+      "required": true
+    },
+    "section_subtitle": {
+      "type": "text"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.feature-item"
+    },
+    "primary_cta_label": {
+      "type": "string"
+    },
+    "primary_cta_url": {
+      "type": "string"
+    }
+  }
+}
